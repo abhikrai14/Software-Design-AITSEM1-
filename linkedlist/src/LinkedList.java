@@ -13,12 +13,12 @@ class LinkedList{
 
 		public  void insert_last(String s1,int a)
 	        {      
-				Node temp2 = new Node(s1, a);
-				Node temp = head;
-				while(temp.next!=null) {
-					temp=temp.next;
-				}
-				temp2=temp.next;
+				Node temp2 = head;
+				while(temp2.next!=null)
+					temp2=temp2.next;
+					Node temp = new Node(s1, a);
+				temp2.next=temp;
+				temp.next=null;
 	        }
 
 
